@@ -9,7 +9,12 @@ namespace random_episode
     {
         static void Main(string[] args)
         {
-            String path = Console.ReadLine();
+            String path;
+
+            if (args.Length == 0)
+                path = "D:\\Videos";
+            else
+                path = args[0];
             
             String[] dirList = Directory.GetDirectories(path);
             
